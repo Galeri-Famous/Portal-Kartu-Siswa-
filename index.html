@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cetak Kartu Siswa Madrasah</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script defer src="src/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Cetak Kartu Siswa Madrasah</h1>
+      <h3>Madrasah Ibtidaiyah Asy-Syafi’iyyah 02 Jatibarang</h3>
+    </header>
+
+    <main>
+      <section id="cari-siswa">
+        <label for="nisn">Masukkan NISN:</label>
+        <input type="text" id="nisn" placeholder="Masukkan NISN" />
+        <button onclick="cariSiswa()">Cari</button>
+      </section>
+
+      <section id="preview-kartu" style="display: none;">
+        <h2>Pratinjau Kartu Siswa</h2>
+        <div class="kartu">
+          <div class="kartu-header">
+            <img src="" alt="Logo Madrasah" id="logo-madrasah" />
+            <div>
+              <strong>Madrasah Ibtidaiyah Asy-Syafi’iyyah 02 Jatibarang</strong><br />
+              Jl. KH. Abdul Wahab Sya'roni No.18 Jatibarang Lor, Kec. Jatibarang
+              Kab. Brebes Kode Pos: 52261
+            </div>
+          </div>
+
+          <div class="kartu-body">
+            <img src="" alt="Foto Siswa" id="foto-siswa" />
+            <div class="kartu-info">
+              <div><strong>Nama:</strong> <span id="nama-siswa"></span></div>
+              <div><strong>NISN:</strong> <span id="nisn-siswa"></span></div>
+              <div><strong>Tempat, Tanggal Lahir:</strong> <span id="ttl-siswa"></span></div>
+              <div><strong>Jenis Kelamin:</strong> <span id="jk-siswa"></span></div>
+              <div><strong>Alamat:</strong> <span id="alamat-siswa"></span></div>
+              <div><strong>Tahun Ajaran:</strong> <span id="tahun-siswa"></span></div>
+            </div>
+          </div>
+
+          <div class="kartu-footer">
+            <div class="qr">
+              <img src="" alt="QR Code" id="qr-code" />
+            </div>
+            <div class="ttd">
+              Kepala Madrasah<br />
+              <strong>Hj. Siti Aminah, S.Pd.I</strong><br />
+              <img src="" alt="Tanda Tangan" id="ttd" />
+            </div>
+          </div>
+        </div>
+
+        <div id="aksi-buttons">
+          <button onclick="unduhPdf()">Unduh PDF</button>
+          <button onclick="unduhGambar()">Unduh Gambar</button>
+          <button onclick="cetakKartu()">Cetak Sekarang</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

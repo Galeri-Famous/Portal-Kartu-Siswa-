@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Edit Data Siswa</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script defer src="src/admin.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Halaman Admin - Edit Data Kartu Siswa</h1>
+    </header>
+
+    <main>
+      <form id="siswa-form">
+        <fieldset>
+          <legend>Data Siswa</legend>
+          <label>Nama: <input type="text" id="input-nama" required /></label><br />
+          <label>NISN: <input type="text" id="input-nisn" required /></label><br />
+          <label>Tempat, Tanggal Lahir: <input type="text" id="input-ttl" required /></label><br />
+          <label>Jenis Kelamin: <input type="text" id="input-jk" required /></label><br />
+          <label>Alamat: <input type="text" id="input-alamat" required /></label><br />
+          <label>Tahun Ajaran: <input type="text" id="input-tahun" required /></label><br />
+          <label>Foto Siswa: <input type="file" id="input-foto" accept="image/*" /></label><br />
+          <label>QR Code: <input type="file" id="input-qr" accept="image/*" /></label><br />
+        </fieldset>
+
+        <fieldset>
+          <legend>Kustomisasi Kartu</legend>
+          <label>Logo Madrasah: <input type="file" id="input-logo" accept="image/*" /></label><br />
+          <label>Tanda Tangan Kamad: <input type="file" id="input-ttd" accept="image/*" /></label><br />
+          <label>Nama Kamad: <input type="text" id="input-kamad" required /></label><br />
+          <label>Warna Tema:
+            <select id="input-tema">
+              <option value="hijau">Hijau</option>
+              <option value="kuning">Kuning</option>
+              <option value="kombinasi">Hijau & Kuning</option>
+            </select>
+          </label><br />
+          <label>Ukuran Font:
+            <select id="input-fontsize">
+              <option value="14px">14px</option>
+              <option value="16px">16px</option>
+              <option value="18px">18px</option>
+            </select>
+          </label><br />
+        </fieldset>
+
+        <button type="submit">Simpan & Pratinjau</button>
+      </form>
+      <p><a href="index.html">Kembali ke Pratinjau Kartu</a></p>
+    </main>
+  </body>
+</html>
